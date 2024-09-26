@@ -1,0 +1,4 @@
+pyautogui
+selenium
+PyQt6
+webdriver_manager
