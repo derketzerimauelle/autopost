@@ -128,7 +128,7 @@ class App:
         description_input.send_keys(description.replace("\r\n", "\n"))
         
         if label:
-            label_input = WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((By.XPATH, "//label[@aria-label='" + self.marketplace_options["labels"]["Product Labels"] + "']/div/div[2]/div/textarea")))
+            label_input = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located((By.XPATH, "//label[@aria-label='Etiquetas de productos']//textarea")))
             if not label.endswith(","):
                 label += ","
             label_input.send_keys(label)
